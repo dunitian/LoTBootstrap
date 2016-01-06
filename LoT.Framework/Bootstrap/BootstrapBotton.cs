@@ -3,24 +3,23 @@ using LoT.Framework.Common;
 using LoT.Framework.Bootstrap.Enum;
 using System;
 using LoT.Framework.Bootstrap.IBootstrap;
+using System.Web;
 
 namespace LoT.Framework.Bootstrap
 {
     public class BootstrapBotton : IBootstrapBotton
     {
-        StringBuilder btnBuilder = new StringBuilder("<button type=\"button\" class=\"btn btn-primary\">Button</button>");
-
         /// <summary>
-        /// 属性
+        /// 文本属性
         /// </summary>
-        public string Text { get; set; }
-
+        protected string Text { get; set; }
 
         /// <summary>
         /// 构造函数
         /// </summary>
         public BootstrapBotton(string text) { Text = text; }
 
+        #region 实现父接口
         /// <summary>
         /// 设置控件ID（可空）
         /// </summary>
@@ -86,17 +85,18 @@ namespace LoT.Framework.Bootstrap
         public override string ToString()
         {
             //todo: 返回控件-字符串格式
-            return base.ToString();
+            return "<button type=\"button\" class=\"btn btn-primary\">Button</button>";
         }
 
         /// <summary>
         /// 返回控件-HTML格式
         /// </summary>
         /// <returns></returns>
-        public string ToHtml()
+        public System.Web.IHtmlString ToHtml()
         {
             //todo: 返回控件-HTML格式
-            throw new NotImplementedException();
+            return new System.Web.HtmlString("<button type=\"button\" class=\"btn btn-primary\">Button</button>");
         }
+        #endregion
     }
 }

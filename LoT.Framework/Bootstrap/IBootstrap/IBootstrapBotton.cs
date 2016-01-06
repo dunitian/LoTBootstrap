@@ -6,11 +6,6 @@ namespace LoT.Framework.Bootstrap.IBootstrap
     public interface IBootstrapBotton : IBootstrapAttr<IBootstrapBotton>
     {
         /// <summary>
-        /// 文本值
-        /// </summary>
-        string Text { get; set; }
-
-        /// <summary>
         /// 设置大小
         /// </summary>
         /// <param name="btnSize"></param>
