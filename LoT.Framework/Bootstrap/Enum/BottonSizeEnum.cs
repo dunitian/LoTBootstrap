@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace LoT.Framework.Enum
+namespace LoT.Framework.Bootstrap.Enum
 {
     public enum BottonSizeEnum
     {

@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LoT.Framework</RootNamespace>
     <AssemblyName>LoT.Framework</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,12 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\DescriptionHelper.cs" />
-    <Compile Include="Enum\BottonSizeEnum.cs" />
-    <Compile Include="Enum\ButtonStyleEnum.cs" />
-    <Compile Include="Extend\BootstrapBotton.cs" />
-    <Compile Include="Extend\BootstrapBase.cs" />
-    <Compile Include="Extend\IBootstrapBotton.cs" />
+    <Compile Include="Bootstrap\IOC\BootstrapContainer.cs" />
+    <Compile Include="Bootstrap\Builder\BeginBuilder.cs" />
+    <Compile Include="Bootstrap\Builder\BuilderBase.cs" />
+    <Compile Include="Bootstrap\Builder\EndBuilder.cs" />
+    <Compile Include="Bootstrap\IOC\IBootstrapContainer.cs" />
+    <Compile Include="Common\EnumDescriptionExt.cs" />
+    <Compile Include="Bootstrap\Enum\BottonSizeEnum.cs" />
+    <Compile Include="Bootstrap\Enum\ButtonStyleEnum.cs" />
+    <Compile Include="Bootstrap\BootstrapBotton.cs" />
+    <Compile Include="Common\HtmlHelperExt.cs" />
+    <Compile Include="Bootstrap\IBootstrap\IBootstrapBotton.cs" />
+    <Compile Include="Bootstrap\IBootstrap\IBootstrapAttr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -1,28 +1,26 @@
-﻿using LoT.Framework.Bootstrap;
-using LoT.Framework.Enum;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LoT.Framework.Bootstrap.Enum;
 
-namespace LoT.Framework.IBootstrap
+namespace LoT.Framework.Bootstrap.IBootstrap
 {
 
-    public interface IBootstrapBotton : IBootstrapCssStyle
+    public interface IBootstrapBotton : IBootstrapAttr<IBootstrapBotton>
     {
+        /// <summary>
+        /// 文本值
+        /// </summary>
+        string Text { get; set; }
+
         /// <summary>
         /// 设置大小
         /// </summary>
         /// <param name="btnSize"></param>
         /// <returns></returns>
-        BootstrapBotton Size(BottonSizeEnum btnSize);
+        IBootstrapBotton Size(BottonSizeEnum? btnSize);
         /// <summary>
         /// 设置样式
         /// </summary>
         /// <param name="btnStyle"></param>
         /// <returns></returns>
-        BootstrapBotton Style(BottonStyleEnum btnStyle);
-
+        IBootstrapBotton Style(BottonStyleEnum? btnStyle);
     }
 }

@@ -3,7 +3,7 @@
     Layout = null;
 }
 
-@using LoT.Framework.Enum;
+@using LoT.Framework.Bootstrap.Enum;
 @using LoT.Framework.Common;
 
 <!DOCTYPE html>
@@ -26,12 +26,19 @@
 </head>
 <body>
     <div>
-        @Html.Bootstrap().Size(BottonSizeEnum.Large).Style(BottonStyleEnum.Info)
+        <h1>Bootstrap封装</h1>
+
+        @Html.Bootstrap().Botton("按钮").Size(BottonSizeEnum.Large).Style(BottonStyleEnum.Info).ToString();
+    </div>
+    <div><hr /><hr /><hr /><hr /></div>
+    <div>
+        <h1>Bootstrap原生</h1>
 
         @*button*@
         <h2>button</h2>
         <button type="button" class="btn btn-primary">Primary(主要的)</button>
         <button type="button" class="btn btn-success">Success(成功的)</button>
+        <button type="button" class="btn">默认样式</button>
 
         @*alert*@
         <br /><h2>alert</h2>
