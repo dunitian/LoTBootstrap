@@ -21,20 +21,6 @@ namespace LoT.Framework.Bootstrap
 
         #region 实现父接口
         /// <summary>
-        /// 设置控件ID（可空）
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public IBootstrapBotton SetID(string id)
-        {
-            if (!string.IsNullOrEmpty(id))
-            {
-                //todo: 设置控件ID
-            }
-            return this;
-        }
-
-        /// <summary>
         /// 设置按钮大小
         /// </summary>
         /// <param name="btnSize"></param>
@@ -60,6 +46,20 @@ namespace LoT.Framework.Bootstrap
             {
                 string des = btnStyle.GetDescription();
                 //todo: 设置按钮样式
+            }
+            return this;
+        }
+
+        /// <summary>
+        /// 设置控件ID（可空）
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IBootstrapBotton SetID(string id)
+        {
+            if (!string.IsNullOrEmpty(id))
+            {
+                //todo: 设置控件ID
             }
             return this;
         }
