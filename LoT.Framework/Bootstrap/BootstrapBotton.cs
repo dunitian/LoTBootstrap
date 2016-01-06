@@ -1,9 +1,6 @@
-﻿using System.Text;
-using LoT.Framework.Common;
+﻿using LoT.Framework.Common;
 using LoT.Framework.Bootstrap.Enum;
-using System;
 using LoT.Framework.Bootstrap.IBootstrap;
-using System.Web;
 
 namespace LoT.Framework.Bootstrap
 {
