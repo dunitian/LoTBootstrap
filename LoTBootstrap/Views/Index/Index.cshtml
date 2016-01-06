@@ -1,0 +1,81 @@
+﻿
+@{
+    Layout = null;
+}
+
+@using LoT.Framework.Enum;
+@using LoT.Framework.Common;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Bootstrap基本页面</title>
+    <!--Bootstrap-->
+    <link href="/Resource/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <!--Bootstrap-->
+    <!--IE9支持HTML5-->
+    <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--IE9支持HTML5-->
+
+</head>
+<body>
+    <div>
+        @Html.Bootstrap().Size(BottonSizeEnum.Large).Style(BottonStyleEnum.Info)
+
+        @*button*@
+        <h2>button</h2>
+        <button type="button" class="btn btn-primary">Primary(主要的)</button>
+        <button type="button" class="btn btn-success">Success(成功的)</button>
+
+        @*alert*@
+        <br /><h2>alert</h2>
+
+        <button type="button" class="alert alert-warning">warning(警告)</button>
+        <button type="button" class="alert alert-danger">danger(危险)</button>
+
+        @*大小*@
+        <br /><h2>大小：</h2>超小 xs，小型 sm，普通(默认)，大型 lg<br />
+
+        <button type="button" class="btn btn-primary btn-sm">Primary(主要的)</button>
+        <button type="button" class="btn btn-primary">Primary(主要的)</button>
+
+        <br />
+
+        <div class="well well-sm">well</div>
+        <div class="well">well</div>
+        <div class="well well-lg">well</div>
+
+        <br /><h2>progress</h2>
+        <div class="progress active">
+            <div class="progress-bar" style="width:15%">
+                <span class="sr-only"></span>
+            </div>
+        </div>
+
+        <br /><h2>progress</h2>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                编程语言<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">C#</a></li>
+                <li><a href="#">Net</a></li>
+                <li><a href="#">C</a></li>
+                <li class="divider"></li>
+                <li><a href="#">R</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="/Resource/Javascript/jquery-1.8.3.min.js"></script>
+    <!--Bootstrap-->
+    <!--<script src="/Resource/Bootstrap/js/bootstrap.js"></script>-->
+    <!--Bootstrap-->
+</body>
+</html>
